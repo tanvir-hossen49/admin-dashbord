@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- navigation bar start -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-brands fa-apple"></i></span>
+                        <span class="title">
+                            <h2>Apple Care</h2>
+                        </span>
+                    </a>
+
+                </li>
+                <li class="active">
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-house"></i></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-users"></i></span>
+                        <span class="title">Customers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-message"></i></span>
+                        <span class="title">Message</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-regular fa-circle-question"></i></span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="title">Setting</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- navigation bar end -->
+
+        <!-- main -->
+        <main>
+            <div class="topbar">
+                <div class="toggle"></div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search Here">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                </div>
+                <div class="user">
+                    <img src="img/user.jpg" alt="user">
+                </div>
+            </div>
+
+            <!-- card start -->
+            <div class="card-box p-20">
+                <div class="card">
+                    <div class="common">
+                        <div class="number">1,200</div>
+                        <div class="card_name">Daily Views</div>
+                    </div>
+                    <div class="iconBox common">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="common">
+                        <div class="number">88</div>
+                        <div class="card_name">Sales</div>
+                    </div>
+                    <div class="iconBox common">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="common">
+                        <div class="number">133</div>
+                        <div class="card_name">Commments</div>
+                    </div>
+                    <div class="iconBox common">
+                        <i class="fa-solid fa-comment"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="common">
+                        <div class="number">1,200</div>
+                        <div class="card_name">Earning</div>
+                    </div>
+                    <div class="iconBox common">
+                        <i class="fa-sharp fa-solid fa-dollar-sign"></i>
+                    </div>
+                </div>
+            </div>
+            <!--  card end -->
+
+            <!-- oder and customers details start -->
+            <div class="details p-20">
+                <div class="recentOrders p-20">
+                    <div class="cardHeader">
+                        <h2>Recent Oders</h2>
+                        <div class="btn-group">
+                            <a href="#" id='viewAllBtn' class="viewAll">View All</a>
+                            <a href="#" id='filterBtn' class="filter"></a>
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td >Name</td>
+                                <td>Price</td>
+                                <td id="payment">Payment
+
+                                </td>
+                                <td id="status">Status
+
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody id="customers">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="recentCustomers p-20">
+                    <div class="cardHeader">
+                        <h2>Recent Customers</h2>
+                    </div>
+                    <table>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- oder and customers details end -->
+
+        </main>
+        <!-- main end -->
+    </div>
+
+    <script src="api.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
